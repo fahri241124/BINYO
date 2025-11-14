@@ -7,6 +7,8 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
 
@@ -466,5 +468,46 @@
             </p>
         </footer>
     </div>
+
+    <script>
+        // Inisialisasi ScrollReveal
+        // Pilihan konfigurasi umum untuk animasi
+        ScrollReveal({ 
+            distance: '60px', // Jarak dari mana elemen akan bergerak
+            duration: 1500,  // Durasi animasi
+            easing: 'cubic-bezier(.5, 0, 0, 1)', // Kurva kecepatan
+            reset: false     // Hanya berjalan sekali per muatan halaman
+        });
+
+        // Animasi untuk Header (Turun dari atas)
+        ScrollReveal().reveal('.header', { origin: 'top' });
+
+        // Animasi untuk Gambar Menu (Muncul dari kiri secara berurutan)
+        ScrollReveal().reveal('.menu-images', { 
+            origin: 'left',
+            interval: 150, // Memberikan efek berurutan pada setiap gambar
+            delay: 300 
+        });
+        ScrollReveal().reveal('.image-box', { 
+            interval: 100, // Memberikan efek berurutan pada setiap gambar
+            delay: 400,
+            origin: 'bottom'
+        });
+
+        // Animasi untuk Judul Daftar Menu (Muncul dari bawah)
+        ScrollReveal().reveal('.list-title', { origin: 'bottom', delay: 700 });
+
+        // Animasi untuk setiap Item Menu (Muncul dari kiri, berurutan)
+        ScrollReveal().reveal('.menu-item', { 
+            origin: 'left',
+            interval: 100, // Membuat setiap baris menu muncul satu per satu
+            delay: 900 
+        });
+
+        // Animasi untuk Tombol Order dan Footer (Muncul dari bawah)
+        ScrollReveal().reveal('.order-section', { origin: 'bottom', delay: 1200 });
+        ScrollReveal().reveal('.footer', { origin: 'bottom', delay: 1400 });
+
+    </script>
 </body>
 </html>
